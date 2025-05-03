@@ -12,4 +12,10 @@ app.get("/", function(req, res) {
   res.sendFile(absolutePath);
 })
 
+absolutePathForAssets = __dirname + "/public";
+
+app.use("/public", function(req, res) {
+  res.express.static(absolutePathForAssets);
+})
+
 module.exports = app;
