@@ -14,8 +14,6 @@ app.get("/", function(req, res) {
 
 absolutePathForAssets = __dirname + "/public";
 
-app.use("/public", function(req, res) {
-  res.express.static(absolutePathForAssets);
-})
+app.use("/public", express.static(absolutePathForAssets));
 
 module.exports = app;
